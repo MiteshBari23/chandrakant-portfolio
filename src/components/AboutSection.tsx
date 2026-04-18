@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutImage from "@/assets/about-portrait.jpg";
+import aboutImage from "@/assets/artist.jpg";
 
 const AboutSection = () => {
   return (
@@ -34,23 +34,40 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-5 text-muted-foreground body-regular">
               <p>
-                For over a decade, I have been walking the line between art and ecology — 
-                spending mornings with pigments and afternoons on nesting beaches, documenting 
-                the quiet rhythms of sea turtles.
-              </p>
-              <p>
-                My paintings emerge from this dual life: the textures of sand, the depth of 
-                the open ocean, the patience required both to wait for a turtle to nest and 
-                to let a painting reveal itself.
-              </p>
-              <p>
-                I believe that art and conservation share a common root — an attention to the 
-                world that is both careful and deeply felt. Each canvas is an act of witness; 
-                each night on the beach, a prayer for continuity.
+                I am a visual artist with a Bachelor’s and Master’s degree in Painting from Sir J. J. School of Art, Mumbai. My work in painting and sculpture is inspired by turtles, their form, movement, and quiet symbolism in nature. Alongside my art practice, I’ve been actively involved in turtle conservation for several years that includes volunteering on the west coast of Maharashtra, assisting in metal tagging, collaborating with the Turtle Survival Alliance, and contributing to India’s first prosthetic turtle flipper. I also create and sell products to support conservation and awareness.
               </p>
             </div>
-            <div className="divider-wave mt-10" />
           </motion.div>
+
+
+          <motion.div
+            className="md:col-span-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="heading-section text-foreground mb-8">
+                Artist Statement
+              </h2>
+              <div className="space-y-5 text-muted-foreground body-regular text-left">
+                <p>
+                  A pond in my backyard is the place from where the form of turtle in my paintings has emerged. It was a pond of inspiration for me. I used to spend a lot of time capturing moments and life inside it. It was more like a canvas for me with the continuous play of various elements creating visuals but with a constant change. I used to observe the turtles and their routine, their forms, their moods, their postures and their colors. My paintings are the reflection of the very pond in my backyard. It had its own world inside it but with a continuous dialogue with the surrounding.
+                </p>
+                <p>
+                  Various reflections creating various moods, forms and patterns with colors changing with the seasons. All the phases of moon reflected on the floating back of the turtles created interesting compositions. The earthy colours of the pond, the greyish shades of turtles and all the faded reflections together made my colour palette.
+                </p>
+                <p>
+                  I work primarily in oil and watercolour but also love to explore mixed media.
+                </p>
+                <p>
+                  I also draw from my years of experience in turtle conservation, blending observation with advocacy. Through my art, I hope to inspire greater care for the wildlife we share our world with.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>

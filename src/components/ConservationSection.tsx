@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import conservationImage from "@/assets/conservation-fieldwork.jpg";
+import conservationImage from "@/assets/conservation.jpg";
 import { Shell, Waves, Leaf } from "lucide-react";
 
 const stats = [
@@ -20,10 +20,12 @@ const ConservationSection = () => {
           className="text-center mb-14"
         >
           <p className="label-caps text-secondary mb-4">Conservation</p>
-          <h2 className="heading-section text-foreground mb-6">Protecting the ancient mariners</h2>
+          <h2 className="heading-section text-foreground mb-6">
+            Turtle Conservation Highlights
+          </h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            Sea turtles have navigated the world's oceans for over 100 million years. 
-            Our work ensures they continue to return to these shores.
+            Sea turtles have navigated the world's oceans for over 100 million
+            years. Our work ensures they continue to return to these shores.
           </p>
         </motion.div>
 
@@ -37,7 +39,7 @@ const ConservationSection = () => {
             <img
               src={conservationImage}
               alt="Field conservation work monitoring sea turtle nests"
-              className="w-full aspect-[3/2] object-cover"
+              className="w-full aspect-[1] object-cover"
               loading="lazy"
             />
           </motion.div>
@@ -51,14 +53,21 @@ const ConservationSection = () => {
           >
             <div className="space-y-4 text-muted-foreground body-regular">
               <p>
-                Every nesting season, I join a small team of volunteers and biologists to 
-                patrol the coastline at night, marking and protecting turtle nests from 
-                predators and coastal development.
+                Made India’s first one-of-it’s-kind prosthetic turtle flipper.
               </p>
               <p>
-                Through community education programs and partnerships with local schools, 
-                we work to build a culture of stewardship — teaching the next generation 
-                why these ancient creatures matter.
+                Volunteer and Hands-on experience in metal tagging & rescue on
+                Maharashtra’s west coast.
+              </p>
+              <p>
+                Rescue and rehabilitation of many fresh water turtles in the
+                rural area by using awareness as a key.
+              </p>
+              <p>Collaboration with Turtle Survival Alliance,
+              products made & sold to generate conservation fund</p>
+              <p>
+                Collaboration with Turtle Survival Alliance Products made & sold
+                to generate conservation fund
               </p>
             </div>
 
@@ -66,8 +75,12 @@ const ConservationSection = () => {
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <stat.icon className="w-5 h-5 text-primary mx-auto mb-2" />
-                  <p className="font-heading text-2xl text-foreground">{stat.value}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
+                  <p className="font-heading text-2xl text-foreground">
+                    {stat.value}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -83,13 +96,26 @@ const ConservationSection = () => {
           className="mt-20 grid sm:grid-cols-3 gap-6"
         >
           {[
-            { title: "Green Sea Turtle", text: "Chelonia mydas — the most common visitor to our beaches, named for the green color of their fat." },
-            { title: "Hawksbill Turtle", text: "Eretmochelys imbricata — critically endangered, with a beautiful shell pattern that has made them targets for centuries." },
-            { title: "Loggerhead Turtle", text: "Caretta caretta — named for their large heads, these powerful swimmers migrate thousands of miles each year." },
+            {
+              title: "Green Sea Turtle",
+              text: "Chelonia mydas — the most common visitor to our beaches, named for the green color of their fat.",
+            },
+            {
+              title: "Hawksbill Turtle",
+              text: "Eretmochelys imbricata — critically endangered, with a beautiful shell pattern that has made them targets for centuries.",
+            },
+            {
+              title: "Loggerhead Turtle",
+              text: "Caretta caretta — named for their large heads, these powerful swimmers migrate thousands of miles each year.",
+            },
           ].map((card) => (
             <div key={card.title} className="bg-card p-8 border border-border">
-              <h3 className="font-heading text-lg text-foreground italic mb-3">{card.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{card.text}</p>
+              <h3 className="font-heading text-lg text-foreground italic mb-3">
+                {card.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {card.text}
+              </p>
             </div>
           ))}
         </motion.div>
