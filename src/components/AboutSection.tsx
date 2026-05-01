@@ -31,7 +31,7 @@ const AboutSection = () => {
             <p className="label-caps text-primary mb-4">About</p>
             <h2 className="heading-section text-foreground mb-8">
             </h2>
-            <div className="space-y-5 text-muted-foreground body-regular">
+            <div className="space-y-5 text-muted-foreground body-regular text-justify">
               <p>
                 I am a visual artist with a Bachelor’s and Master’s degree in Painting from Sir J. J. School of Art, Mumbai. My work in painting and sculpture is inspired by turtles, their form, movement, and quiet symbolism in nature. Alongside my art practice, I’ve been actively involved in turtle conservation for several years that includes volunteering on the west coast of Maharashtra, assisting in metal tagging, collaborating with the Turtle Survival Alliance, and contributing to India’s first prosthetic turtle flipper. I also create and sell products to support conservation and awareness.
               </p>

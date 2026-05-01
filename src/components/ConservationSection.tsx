@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import conservationImage from "@/assets/conservation_cover.jpg";
 import { Shell, Waves, Leaf } from "lucide-react";
-
+import conservationImage2 from "@/assets/paper_cutting.jpg";
+import conservationImage3 from "@/assets/turtles.jpg";
 const ConservationSection = () => {
   return (
     <section id="conservation" className="section-padding texture-overlay">
@@ -53,14 +54,39 @@ const ConservationSection = () => {
                 Rescue and rehabilitation of many fresh water turtles in the
                 rural area by using awareness as a key.
               </p>
-              <p>Collaboration with Turtle Survival Alliance,
-              products made & sold to generate conservation fund</p>
+              <p>
+                Collaboration with Turtle Survival Alliance, products made &
+                sold to generate conservation fund
+              </p>
               <p>
                 Collaboration with Turtle Survival Alliance Products made & sold
                 to generate conservation fund
               </p>
             </div>
+          </motion.div>
+        </div>
 
+        <div className="grid gap-12 md:gap-16 items-center mt-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
+            <img
+              src={conservationImage2}
+              alt="Field conservation work monitoring sea turtle nests"
+              className="w-full width=100% object-cover"
+              loading="lazy"
+            />
+
+            <img
+              src={conservationImage3}
+              alt="Field conservation work monitoring sea turtle nests"
+              className="w-fullobject-cover"
+              loading="lazy"
+            />
           </motion.div>
         </div>
 
