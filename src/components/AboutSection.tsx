@@ -30,7 +30,6 @@ const AboutSection = () => {
           >
             <p className="label-caps text-primary mb-4">About</p>
             <h2 className="heading-section text-foreground mb-8">
-              Between canvas and coastline
             </h2>
             <div className="space-y-5 text-muted-foreground body-regular">
               <p>
@@ -51,7 +50,7 @@ const AboutSection = () => {
               <h2 className="heading-section text-foreground mb-8">
                 Artist Statement
               </h2>
-              <div className="space-y-5 text-muted-foreground body-regular text-left">
+              <div className="space-y-5 text-muted-foreground body-regular text-justify">  
                 <p>
                   A pond in my backyard is the place from where the form of turtle in my paintings has emerged. It was a pond of inspiration for me. I used to spend a lot of time capturing moments and life inside it. It was more like a canvas for me with the continuous play of various elements creating visuals but with a constant change. I used to observe the turtles and their routine, their forms, their moods, their postures and their colors. My paintings are the reflection of the very pond in my backyard. It had its own world inside it but with a continuous dialogue with the surrounding.
                 </p>

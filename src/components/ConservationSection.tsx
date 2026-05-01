@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
-import conservationImage from "@/assets/conservation.jpg";
+import conservationImage from "@/assets/conservation_cover.jpg";
 import { Shell, Waves, Leaf } from "lucide-react";
-
-const stats = [
-  { icon: Shell, label: "Nests Protected", value: "340+" },
-  { icon: Waves, label: "Coastline Monitored", value: "12 km" },
-  { icon: Leaf, label: "Years Active", value: "11" },
-];
 
 const ConservationSection = () => {
   return (
@@ -23,10 +17,6 @@ const ConservationSection = () => {
           <h2 className="heading-section text-foreground mb-6">
             Turtle Conservation Highlights
           </h2>
-          <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            Sea turtles have navigated the world's oceans for over 100 million
-            years. Our work ensures they continue to return to these shores.
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mt-16">
@@ -71,19 +61,6 @@ const ConservationSection = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-border">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <stat.icon className="w-5 h-5 text-primary mx-auto mb-2" />
-                  <p className="font-heading text-2xl text-foreground">
-                    {stat.value}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
 

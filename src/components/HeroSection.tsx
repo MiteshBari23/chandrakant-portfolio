@@ -22,17 +22,15 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          <p className="label-caps text-primary mb-4">Painter · Sea Turtle Conservator</p>
           <h1 className="heading-display text-foreground mb-6">
             Artist & conservationist
+          </h1>
+          <h1 className="heading-display text-foreground mb-6 font-normal">
             Conservation through the medium of art
           </h1>
-          <p className="body-large text-muted-foreground max-w-lg">
-            Where brushstrokes meet the tide — painting the living world and protecting the creatures that inhabit it.
-          </p>
+          <p className="body-large text-muted-foreground max-w-lg"></p>
         </motion.div>
       </div>
-
     </section>
   );
 };
