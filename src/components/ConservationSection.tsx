@@ -42,26 +42,38 @@ const ConservationSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="space-y-4 text-muted-foreground body-regular">
-              <p>
-                Made India’s first one-of-it’s-kind prosthetic turtle flipper.
-              </p>
-              <p>
-                Volunteer and Hands-on experience in metal tagging & rescue on
-                Maharashtra’s west coast.
-              </p>
-              <p>
-                Rescue and rehabilitation of many fresh water turtles in the
-                rural area by using awareness as a key.
-              </p>
-              <p>
-                Collaboration with Turtle Survival Alliance, products made &
-                sold to generate conservation fund
-              </p>
-              <p>
-                Collaboration with Turtle Survival Alliance Products made & sold
-                to generate conservation fund
-              </p>
+            <div className="text-muted-foreground body-regular">
+              <ul className="list-disc space-y-10">
+                <li>
+                  <p>
+                    Made India’s first one-of-it’s-kind prosthetic turtle flipper.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Volunteer and Hands-on experience in metal tagging & rescue on
+                    Maharashtra’s west coast.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Rescue and rehabilitation of many fresh water turtles in the
+                    rural area by using awareness as a key.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Collaboration with Turtle Survival Alliance, products made &
+                    sold to generate conservation fund
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Collaboration with Turtle Survival Alliance Products made &
+                    sold to generate conservation fund
+                  </p>
+                </li>
+              </ul>
             </div>
           </motion.div>
         </div>
