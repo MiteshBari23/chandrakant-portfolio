@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import conservationImage from "@/assets/conservation.jpg";
 import heroImage2 from "@/assets/heroSection2.jpg";
 import heroImage3 from "@/assets/heroSection3.jpg";
+import heroImage4 from "@/assets/heroSection4.jpg";
 
 const heroSlides = [
   {
@@ -11,7 +12,7 @@ const heroSlides = [
     alt: "Conservation work with turtles on the shore",
   },
   {
-    src: heroImage2,
+    src: heroImage4,
     alt: "Turtle conservation hero section image two",
   },
   {
@@ -57,23 +58,23 @@ const HeroSection = () => {
   }, [clearAutoplay]);
 
   return (
-    <section className="relative flex flex-col items-start pt-16 texture-overlay md:pb-28">
+    <section className="relative flex flex-col items-start pt-16 texture-overlay">
       {/* Image Carousel Container */}
       <div className="relative w-full overflow-hidden">
         <Carousel
           opts={{ loop: true, align: "start", containScroll: "trimSnaps" }}
           setApi={setEmblaApi}
-          className="h-64 md:h-auto md:min-h-[500px]"
+          className="h-64 md:h-[800px]"
           onPointerDown={() => setIsPaused(true)}
           onPointerUp={() => setIsPaused(false)}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <CarouselContent className="h-full min-h-64 md:min-h-screen ml-0">
+          <CarouselContent className="h-full min-h-64 md:min-h-[800px]">
             {heroSlides.map((slide, index) => (
               <CarouselItem
                 key={slide.alt}
-                className={index === 0 ? "h-full overflow-hidden bg-slate-950/10 pl-0" : "h-full overflow-hidden bg-slate-950/10"}
+                className={index === 0 ? "h-full overflow-hidden bg-slate-950/10" : "h-full overflow-hidden bg-slate-950/10"}
               >
                 <img
                   src={slide.src}
