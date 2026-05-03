@@ -101,39 +101,6 @@ const ConservationSection = () => {
             />
           </motion.div>
         </div>
-
-        {/* Educational cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="mt-20 grid sm:grid-cols-3 gap-6"
-        >
-          {[
-            {
-              title: "Green Sea Turtle",
-              text: "Chelonia mydas — the most common visitor to our beaches, named for the green color of their fat.",
-            },
-            {
-              title: "Hawksbill Turtle",
-              text: "Eretmochelys imbricata — critically endangered, with a beautiful shell pattern that has made them targets for centuries.",
-            },
-            {
-              title: "Loggerhead Turtle",
-              text: "Caretta caretta — named for their large heads, these powerful swimmers migrate thousands of miles each year.",
-            },
-          ].map((card) => (
-            <div key={card.title} className="bg-card p-8 border border-border">
-              <h3 className="font-heading text-lg text-foreground italic mb-3">
-                {card.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {card.text}
-              </p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

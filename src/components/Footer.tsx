@@ -17,44 +17,29 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <p className="font-heading text-2xl mb-3">Marina Soleil</p>
+            <p className="font-heading text-2xl mb-3">Chandrakant Halyal</p>
             <p className="text-sm opacity-70">
-              Painter & Sea Turtle Conservator
+              Artist & Conservationist
             </p>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <p className="label-caps mb-4 opacity-70">Newsletter</p>
-            {subscribed ? (
-              <p className="text-sm opacity-70">Thank you for subscribing.</p>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  placeholder="your@email.com"
-                  className="flex-1 bg-transparent border-b border-accent-foreground/30 py-2 text-sm text-accent-foreground placeholder:text-accent-foreground/40 focus:outline-none focus:border-accent-foreground transition-colors font-body"
-                />
-                <button type="submit" className="label-caps ml-4 text-accent-foreground/70 hover:text-accent-foreground transition-colors">
-                  Join
-                </button>
-              </form>
-            )}
-          </div>
 
           {/* Social */}
           <div className="flex md:justify-end items-start gap-5">
-            {[Instagram, Youtube, Twitter, Linkedin].map((Icon, i) => (
+            {[
+              { Icon: Instagram, label: "Studio", href: "https://www.instagram.com/aami_art_studio?igsh=MWw0cnJ4dTF0enUyNw==" },
+              { Icon: Instagram, label: "Artist", href: "https://www.instagram.com/chandrakanthalyal?igsh=ZG1ycTgwd3ByZnRj" },
+            ].map((item, i) => (
               <a
                 key={i}
-                href="#"
-                className="text-accent-foreground/50 hover:text-accent-foreground transition-colors"
-                aria-label="Social media link"
+                href={item.href}
+                className="text-accent-foreground/50 hover:text-accent-foreground transition-colors text-center"
+                aria-label={`${item.label} social media link`}
               >
-                <Icon size={18} />
+                <item.Icon size={18} />
+                <span className="block text-[10px] opacity-70 mt-1">
+                  {item.label}
+                </span>
               </a>
             ))}
           </div>
@@ -63,7 +48,7 @@ const Footer = () => {
         <div className="divider-wave mb-8" />
 
         <p className="text-xs text-center opacity-40">
-          © {new Date().getFullYear()} Marina Soleil. All rights reserved.
+          © {new Date().getFullYear()} Chandrakant Halyal. All rights reserved.
         </p>
       </div>
     </footer>

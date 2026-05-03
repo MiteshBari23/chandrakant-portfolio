@@ -1,13 +1,78 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/use-toast";
+
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
 
 const ContactSection = () => {
-  const [submitted, setSubmitted] = useState(false);
+ const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({ title: "Error", description: "Please fill in all fields", variant: "destructive" });
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      toast({ title: "Error", description: "Please enter a valid email address", variant: "destructive" });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // format time for your template (IST)
+      const istTime = new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour12: true,
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      // ✅ Real send via EmailJS
+      await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+        {
+          // must match your template placeholders
+          name: formData.name,
+          time: istTime,
+          message: formData.message,
+
+          // helpful extras
+          reply_to: formData.email,
+          from_email: formData.email,
+          subject: `New portfolio inquiry from ${formData.name}`,
+        },
+        PUBLIC_KEY
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -30,9 +95,7 @@ const ContactSection = () => {
               <div className="pt-4 space-y-2">
                 <p className="text-foreground font-heading">Studio Location</p>
                 <p className="text-sm text-muted-foreground">
-                  Coastal Arts Quarter<br />
-                  Praia da Rocha, Algarve<br />
-                  Portugal
+                 Aami Art Studio, Ganeshpeth, Panchgani
                 </p>
               </div>
             </div>
@@ -44,7 +107,7 @@ const ContactSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {submitted ? (
+            {isSubmitting ? (
               <div className="flex items-center justify-center h-full">
                 <div className="text-center">
                   <p className="heading-sub text-foreground mb-2">Thank you.</p>

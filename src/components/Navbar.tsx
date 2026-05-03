@@ -6,7 +6,6 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Artworks", href: "#artworks" },
   { label: "Conservation", href: "#conservation" },
-  { label: "Journal", href: "#journal" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -17,7 +16,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
       <div className="section-container flex items-center justify-between h-16">
         <a href="#" className="font-heading text-xl font-medium text-foreground tracking-tight">
-          Marina Soleil
+          Chandrakant Halyal 
         </a>
         
         {/* Desktop */}
