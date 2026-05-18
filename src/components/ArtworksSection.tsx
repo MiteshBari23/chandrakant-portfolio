@@ -27,43 +27,144 @@ import waterColor6 from "@/assets/IMG_2093.jpg";
 import waterColor7 from "@/assets/IMG_2094.jpg";
 import waterColor8 from "@/assets/IMG_2095.jpg";
 
-type Category = "all" | "Oil Colour Paintings" | "Water Colour Paintings" | "Sculptures";
+type Category =
+  | "all"
+  | "Oil Colour Paintings"
+  | "Water Colour Paintings"
+  | "Sculptures";
 
 const artworks = [
-  { src: oil1, title: "Sunset on the Rocks", category: "Oil Colour Paintings" as const, 
-  description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." 
-},
-  { src: oil2, title: "Sunset on the Rocks", category: "Oil Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: oil3, title: "Sunset on the Rocks", category: "Oil Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: oil4, title: "Sunset on the Rocks", category: "Oil Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: oil5, title: "Sunset on the Rocks", category: "Oil Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: oil6, title: "Sunset on the Rocks", category: "Oil Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: oil7, title: "Sunset on the Rocks", category: "Oil Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
+  {
+    src: oil1,
+    title: "Back on nature",
+    category: "Oil Colour Paintings" as const,
+    description: "Size - 20” x 20” ",
+  },
+  {
+    src: oil2,
+    title: "Life Cycle",
+    category: "Oil Colour Paintings" as const,
+    description: "Size - 48” x 54”",
+  },
+  {
+    src: oil3,
+    title: "Yamuna",
+    category: "Oil Colour Paintings" as const,
+    description: "Size - 36” x 48”",
+  },
+  {
+    src: oil4,
+    title: "",
+    category: "Oil Colour Paintings" as const,
+    description: "Size - 18” x 18”",
+  },
+  {
+    src: oil5,
+    title: "Belife",
+    category: "Oil Colour Paintings" as const,
+    description: "Size - 12” x 12”",
+  },
+  {
+    src: oil6,
+    title: "",
+    category: "Oil Colour Paintings" as const,
+    description: "Size - 18” x 18”",
+  },
+  {
+    src: oil7,
+    title: "",
+    category: "Oil Colour Paintings" as const,
+    description: "Size - 18” x 18”",
+  },
 
+  {
+    src: sculptures1,
+    title: "Chess",
+    category: "Sculptures" as const,
+    description: "Medium - Stone & brass Size - 20” x 20” ",
+  },
+  {
+    src: sculptures2,
+    title: "Pond of inspiration ",
+    category: "Sculptures" as const,
+    description:
+      "Medium - Rock Dhokra (Devrai art village’s patented fusion) & Stone base  Size - 10”",
+  },
+  {
+    src: sculptures3,
+    title: "Survival ",
+    category: "Sculptures" as const,
+    description:
+      "Medium - Rock Dhokra ( Devrai art Village’s Petented fusion of stone and brass) & brass Size - 9” x 8” x 6”",
+  },
+  {
+    src: sculptures4,
+    title: "Resilience ",
+    category: "Sculptures" as const,
+    description: "Medium - Stone Size - 42” x 18” x 15”",
+  },
+  {
+    src: sculptures5,
+    title: "Prakriti & Sanskriti ",
+    category: "Sculptures" as const,
+    description: "Medium - Terracotta, Fiberhlass & Metal Size - 48” x 48”",
+  },
+  {
+    src: sculptures6,
+    title: "Kurmavatar ",
+    category: "Sculptures" as const,
+    description:
+      "Medium - Rock-Dhokra ( Devrai art village’s patented fusion of stone and brass) Size - 18”",
+  },
 
-
-
-  { src: sculptures1, title: "Sunset on the Rocks", category: "Sculptures" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: sculptures2, title: "Sunset on the Rocks", category: "Sculptures" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: sculptures3, title: "Sunset on the Rocks", category: "Sculptures" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: sculptures4, title: "Sunset on the Rocks", category: "Sculptures" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: sculptures5, title: "Sunset on the Rocks", category: "Sculptures" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: sculptures6, title: "Sunset on the Rocks", category: "Sculptures" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-
-
-
-
-  { src: waterColor1, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: waterColor2, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: waterColor3, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: waterColor4, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: waterColor5, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: waterColor6, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: waterColor7, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-  { src: waterColor8, title: "Sunset on the Rocks", category: "Water Colour Paintings" as const, description: "Watercolor on handmade paper, 2024. Inspired by the western coast at dusk." },
-
-
-
+  {
+    src: waterColor1,
+    title: " ",
+    category: "Water Colour Paintings" as const,
+    description: "Medium - Watercolour on handmade paper  Size - 22” x 22",
+  },
+  {
+    src: waterColor2,
+    title: " ",
+    category: "Water Colour Paintings" as const,
+    description: "Medium - Watercolour on handmade paper Size - 22” x 22”",
+  },
+  {
+    src: waterColor3,
+    title: " ",
+    category: "Water Colour Paintings" as const,
+    description: "Medium - Watercolour on handmade paper Size - 8” x 8”",
+  },
+  {
+    src: waterColor4,
+    title: "Chitra",
+    category: "Water Colour Paintings" as const,
+    description: "Medium - Watercolour on handmade paper Size - 8” x 8”",
+  },
+  {
+    src: waterColor5,
+    title: " ",
+    category: "Water Colour Paintings" as const,
+    description: "Medium - Watercolour on handmade paper Size - 8” x 8”",
+  },
+  {
+    src: waterColor6,
+    title: " ",
+    category: "Water Colour Paintings" as const,
+    description: "Medium - Watercolour on handmade paper Size - 9” x 9”",
+  },
+  {
+    src: waterColor7,
+    title: " ",
+    category: "Water Colour Paintings" as const,
+    description: "Watercolor on handmade paper Size - 11” x 11” ",
+  },
+  {
+    src: waterColor8,
+    title: " ",
+    category: "Water Colour Paintings" as const,
+    description: "Watercolor on handmade paper Size - 11” x 11”",
+  },
 ];
 
 const categories: { label: string; value: Category }[] = [
@@ -75,9 +176,10 @@ const categories: { label: string; value: Category }[] = [
 
 const ArtworksSection = () => {
   const [filter, setFilter] = useState<Category>("all");
-  const [selected, setSelected] = useState<typeof artworks[0] | null>(null);
+  const [selected, setSelected] = useState<(typeof artworks)[0] | null>(null);
 
-  const filtered = filter === "all" ? artworks : artworks.filter((a) => a.category === filter);
+  const filtered =
+    filter === "all" ? artworks : artworks.filter((a) => a.category === filter);
 
   return (
     <section id="artworks" className="section-padding bg-card texture-overlay">
@@ -115,7 +217,7 @@ const ArtworksSection = () => {
           <AnimatePresence mode="popLayout">
             {filtered.map((artwork) => (
               <motion.div
-                key={artwork.title}
+                key={artwork.src}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -133,8 +235,12 @@ const ArtworksSection = () => {
                   />
                 </div>
                 <div className="mt-3 mb-6">
-                  <h3 className="font-heading text-lg text-foreground">{artwork.title}</h3>
-                  <p className="text-sm text-muted-foreground capitalize">{artwork.category}</p>
+                  <h3 className="font-heading text-lg text-foreground">
+                    {artwork.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground capitalize">
+                    {artwork.category}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -174,8 +280,12 @@ const ArtworksSection = () => {
                 </button>
               </div>
               <div className="p-8">
-                <h3 className="heading-sub text-foreground mb-2">{selected.title}</h3>
-                <p className="body-regular text-muted-foreground">{selected.description}</p>
+                <h3 className="heading-sub text-foreground mb-2">
+                  {selected.title}
+                </h3>
+                <p className="body-regular text-muted-foreground">
+                  {selected.description}
+                </p>
               </div>
             </motion.div>
           </motion.div>
